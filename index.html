@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-content">
+        <div class="container">
+            <header class="header">
+                <h1 class="app-title">Weather Dashboard</h1>
+                <p class="app-subtitle">Live weather data and forecasts for any location</p>
+            </header>
+
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="searchInput" placeholder="Search for a city..." class="search-input">
+                    </div>
+                    <button id="locationBtn" class="location-btn" title="Use current location">
+                        <span class="location-icon">📍</span>
+                    </button>
+                    <button id="searchBtn" class="search-btn">Search</button>
+                </div>
+            </section>
+
+            <div id="loadingIndicator" class="loading">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;">
+                <p>❌ Unable to fetch weather data. Please try again.</p>
+            </div>
+
+            <section id="currentWeather" class="current-weather" style="display: none;">
+                <div class="weather-main-card">
+                    <div class="weather-header">
+                        <div class="location-info">
+                            <h2 id="currentLocation">New York, United States</h2>
+                            <p id="currentCondition">Mostly Cloudy</p>
+                        </div>
+                        <div class="weather-icon-large">
+                            <img id="currentIcon" src="" alt="Weather icon">
+                        </div>
+                    </div>
+                    
+                    <div class="temperature-section">
+                        <div class="main-temperature">
+                            <span id="currentTemp">77°</span>
+                        </div>
+                        <div class="feels-like">
+                            <span>Feels like </span>
+                            <span id="feelsLike">77°</span>
+                        </div>
+                        <div class="humidity-badge">
+                            <span id="humidity">79% humidity</span>
+                        </div>
+                    </div>
+
+                    <div class="weather-metrics">
+                        <div class="metric-item">
+                            <div class="metric-icon">💨</div>
+                            <div class="metric-info">
+                                <div class="metric-label">Wind</div>
+                                <div id="windSpeed" class="metric-value">-- km/h</div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon">📊</div>
+                            <div class="metric-info">
+                                <div class="metric-label">Pressure</div>
+                                <div id="pressure" class="metric-value">-- hPa</div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon">👁️</div>
+                            <div class="metric-info">
+                                <div class="metric-label">Visibility</div>
+                                <div id="visibility" class="metric-value">-- km</div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon">🌡️</div>
+                            <div class="metric-info">
+                                <div class="metric-label">UV Index</div>
+                                <div id="uvIndex" class="metric-value">--</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hourlyForecast" class="hourly-forecast" style="display: none;">
+                <h3 class="section-title">24-Hour Forecast</h3>
+                <div class="forecast-container">
+                    <div id="hourlyCards" class="hourly-cards">
+                    </div>
+                </div>
+            </section>
+
+            <section id="dailyForecast" class="daily-forecast" style="display: none;">
+                <h3 class="section-title">7-Day Forecast</h3>
+                <div id="dailyCards" class="daily-cards">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Weather Dashboard | Powered by OpenWeather API</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
