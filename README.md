@@ -23,7 +23,7 @@ Weather Dashboard is a responsive, dark-themed web application that displays rea
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/weather-dashboard.git
+   git clone https://github.com/Samhith06/Weather-Dashboard.git
    cd weather-dashboard
    ```
 
