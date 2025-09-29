@@ -64,7 +64,7 @@ weather-dashboard/
 
 ## Screenshots
 
-![Weather Dashboard](screenshots/dashboard.png)
+![Weather Dashboard](./images/Image1.png)
 *Main dashboard displaying current weather and forecasts.*
 
 ## Contributing
